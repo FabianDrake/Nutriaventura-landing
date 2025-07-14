@@ -1,0 +1,297 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Main content styling */
+main {
+  padding-top: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #2d5016;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  background: linear-gradient(45deg, #2d5016, #4a7c23);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* Hero Logo container */
+.hero-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  padding: 2rem;
+}
+
+.hero-logo {
+  height: 280px;
+  width: auto;
+  max-width: 100%;
+  filter: drop-shadow(0 8px 32px rgba(74, 124, 35, 0.3));
+  transition: all 0.4s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 12px 40px rgba(74, 124, 35, 0.5));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Legacy logo container - removed */
+.logo-container {
+  display: none;
+}
+
+/* Download Section */
+.download-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.google-play-button {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #000000 0%, #434343 100%);
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #5f5f5f;
+  min-width: 180px;
+}
+
+.google-play-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+}
+
+.google-play-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.google-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.google-play-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.download-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.store-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card styling */
+.card {
+  padding: 2em;
+  margin: 2rem 0;
+}
+
+.card button {
+  background: linear-gradient(45deg, #4a7c23, #2d5016);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 124, 35, 0.3);
+}
+
+.card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 124, 35, 0.4);
+}
+
+/* Section styling */
+.section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: #2d5016;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .hero-logo-container {
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+  
+  .hero-logo {
+    height: 200px;
+  }
+  
+  .download-section {
+    margin: 1.5rem 0;
+  }
+  
+  .google-play-button {
+    padding: 10px 16px;
+    min-width: 160px;
+  }
+  
+  .google-play-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .download-text {
+    font-size: 0.7rem;
+  }
+  
+  .store-name {
+    font-size: 1rem;
+  }
+  
+  .section {
+    padding: 3rem 1rem;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-logo-container {
+    margin: 1.5rem 0;
+    padding: 0.5rem;
+  }
+  
+  .hero-logo {
+    height: 160px;
+  }
+  
+  .download-section {
+    margin: 1rem 0;
+  }
+  
+  .google-play-button {
+    padding: 8px 14px;
+    min-width: 140px;
+  }
+  
+  .google-play-content {
+    gap: 8px;
+  }
+  
+  .google-play-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .download-text {
+    font-size: 0.65rem;
+  }
+  
+  .store-name {
+    font-size: 0.9rem;
+  }
+  
+  .card {
+    padding: 1em;
+  }
+  
+  .card button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}

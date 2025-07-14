@@ -1,0 +1,271 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #4a7c23 0%, #2d5016 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  padding: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 20px rgba(45, 80, 22, 0.3);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.navbar-logo:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.logo-image {
+  height: 55px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .logo-image {
+  transform: scale(1.05);
+}
+
+.navbar-logo h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-link:hover {
+  color: #e8f5e8;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(45deg, #ffffff, #e8f5e8);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.navbar-cta {
+  background: linear-gradient(45deg, #ffffff, #f0f8f0);
+  color: #2d5016;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.navbar-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(45deg, #f0f8f0, #ffffff);
+}
+
+/* Hamburger Menu */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger Animation */
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: #ffffff;
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+  background: #ffffff;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    flex-direction: column;
+    background: linear-gradient(135deg, #4a7c23 0%, #2d5016 100%);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 27px rgba(45, 80, 22, 0.3);
+    padding: 2rem 0;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-menu.active {
+    left: 0;
+  }
+
+  .navbar-item {
+    margin: 0;
+  }
+
+  .navbar-link {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    display: block;
+  }
+
+  .navbar-cta {
+    margin-top: 1rem;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ffffff, #f0f8f0);
+    color: #2d5016;
+  }
+
+  .navbar-container {
+    padding: 0 15px;
+    height: 80px;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1.8rem;
+  }
+
+  .logo-image {
+    height: 50px;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 992px) and (min-width: 769px) {
+  .navbar-menu {
+    gap: 1.5rem;
+  }
+
+  .navbar-container {
+    padding: 0 30px;
+  }
+}
+
+/* Large Mobile Styles */
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    padding: 0 10px;
+    height: 75px;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1.6rem;
+  }
+
+  .logo-image {
+    height: 45px;
+  }
+
+  .navbar-toggle .bar {
+    width: 22px;
+  }
+
+  .navbar-menu {
+    top: 75px;
+    padding: 1.5rem 0;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+  padding-top: 90px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 75px;
+  }
+}
