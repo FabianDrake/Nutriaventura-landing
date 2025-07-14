@@ -1,14 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
+  /* Paleta de colores profesional */
+  --primary-green: #2E5016;
+  --secondary-green: #4A7C23;
+  --accent-green: #8BC34A;
+  --light-green: #C8E6C9;
+  
+  --wood-dark: #5D4037;
+  --wood-medium: #8D6E63;
+  --wood-light: #BCAAA4;
+  
+  --cream-white: #FFF8E1;
+  --pure-white: #FFFFFF;
+  --warm-beige: #F5F5DC;
+  
+  --text-dark: #2C2C2C;
+  --text-medium: #666666;
+  --text-light: #999999;
+  
+  /* Typography */
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  
+  /* Optimizations */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,70 +34,115 @@
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
   font-weight: 500;
-  color: #4a7c23;
-  text-decoration: inherit;
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
 a:hover {
-  color: #2d5016;
+  color: var(--secondary-green);
 }
 
 body {
   margin: 0;
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  background: linear-gradient(135deg, var(--cream-white) 0%, var(--pure-white) 50%, var(--warm-beige) 100%);
+  color: var(--text-dark);
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
   font-weight: 700;
 }
 
+p {
+  color: var(--text-medium);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Professional Button Styles */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
   font-family: 'Poppins', sans-serif;
-  background-color: #4a7c23;
-  color: white;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  color: var(--pure-white);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(46, 80, 22, 0.2);
+  position: relative;
+  overflow: hidden;
 }
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
 button:hover {
-  background-color: #2d5016;
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--wood-dark) 0%, var(--wood-medium) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(46, 80, 22, 0.3);
 }
+
+button:hover::before {
+  left: 100%;
+}
+
 button:focus,
 button:focus-visible {
-  outline: 2px solid #4a7c23;
+  outline: 3px solid var(--accent-green);
+  outline-offset: 2px;
 }
 
-/* Light theme optimized for NutriAventura */
-:root {
-  color: #333;
-  background-color: #ffffff;
+button:active {
+  transform: translateY(0);
 }
 
-a:hover {
-  color: #2d5016;
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-button {
-  background-color: #4a7c23;
-  color: white;
-}
-
-button:hover {
-  background-color: #2d5016;
+.section-padding {
+  padding: 5rem 0;
 }

@@ -13,8 +13,9 @@ function App() {
       <main>
         <section id="inicio" className="hero-section">
           <div className="hero-content">
-            <h1>Bienvenido a NutriAventura</h1>
-            <p>Descubre una nueva forma de vivir saludablemente con nuestras aventuras nutricionales</p>
+            <h1>Descubre Tu Aventura Nutricional</h1>
+            <p>Transforma tu relación con la comida a través de experiencias únicas, recetas deliciosas y un estilo de vida saludable que se adapta a ti.</p>
+            
             <div className="hero-logo-container">
               <img src={logo} className="hero-logo" alt="NutriAventura Logo" />
             </div>
@@ -23,7 +24,7 @@ function App() {
               <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="google-play-button">
                 <div className="google-play-content">
                   <div className="google-play-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3.609 1.814L13.792 12L3.609 22.186C3.538 22.257 3.5 22.353 3.5 22.453V1.547C3.5 1.647 3.538 1.743 3.609 1.814Z" fill="url(#paint0_linear)"/>
                       <path d="M20.683 10.748L16.726 8.498L13.792 12L16.726 15.502L20.683 13.252C21.439 12.808 21.439 11.192 20.683 10.748Z" fill="url(#paint1_linear)"/>
                       <path d="M13.792 12L3.609 1.814C4.362 1.061 5.638 1.262 6.753 1.978L13.792 12Z" fill="url(#paint2_linear)"/>
@@ -49,38 +50,55 @@ function App() {
                     </svg>
                   </div>
                   <div className="google-play-text">
-                    <span className="download-text">Descargar en</span>
+                    <span className="download-text">Disponible en</span>
                     <span className="store-name">Google Play</span>
                   </div>
                 </div>
               </a>
             </div>
+            
             <div className="card">
               <button onClick={() => setCount((count) => count + 1)}>
-                Aventuras completadas: {count}
+                🌟 Aventuras Completadas: {count}
               </button>
             </div>
+          </div>
+          
+          <div className="scroll-indicator">
+            <span>Explorar más</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 13L12 18L17 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M7 6L12 11L17 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </div>
         </section>
 
         <section id="servicios" className="section">
-          <h2>Nuestros Servicios</h2>
-          <p>Contenido de servicios aquí...</p>
+          <div className="container">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos un ecosistema completo de herramientas y recursos para tu bienestar nutricional. Desde planes personalizados hasta comunidades de apoyo, todo diseñado para hacer tu viaje hacia una vida más saludable una verdadera aventura.</p>
+          </div>
         </section>
 
         <section id="sobre-nosotros" className="section">
-          <h2>Sobre Nosotros</h2>
-          <p>Información sobre la empresa...</p>
+          <div className="container">
+            <h2>Nuestra Misión</h2>
+            <p>Creemos que la nutrición debe ser accesible, divertida y personalizada. NutriAventura combina la ciencia nutricional con la gamificación para crear experiencias únicas que transforman hábitos y vidas, una aventura a la vez.</p>
+          </div>
         </section>
 
         <section id="recetas" className="section">
-          <h2>Recetas Saludables</h2>
-          <p>Deliciosas recetas nutritivas...</p>
+          <div className="container">
+            <h2>Recetas Nutritivas</h2>
+            <p>Descubre un mundo de sabores saludables con nuestras recetas cuidadosamente seleccionadas. Cada plato es una aventura culinaria que nutre tu cuerpo y deleita tu paladar, adaptándose a tus preferencias y necesidades nutricionales.</p>
+          </div>
         </section>
 
         <section id="contacto" className="section">
-          <h2>Contacto</h2>
-          <p>Información de contacto...</p>
+          <div className="container">
+            <h2>Únete a la Aventura</h2>
+            <p>¿Listo para comenzar tu transformación nutricional? Descarga nuestra app y únete a una comunidad de aventureros de la salud que han decidido tomar control de su bienestar de manera divertida e inteligente.</p>
+          </div>
         </section>
       </main>
       <BottomNav />
