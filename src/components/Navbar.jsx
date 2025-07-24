@@ -26,13 +26,13 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#servicios" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
-              Servicios
+            <a href="#quienes-somos" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+              Quiénes Somos
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#sobre-nosotros" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
-              Sobre Nosotros
+            <a href="#mision-vision" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+              Misión y Visión
             </a>
           </li>
           <li className="navbar-item">
@@ -41,14 +41,9 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#contacto" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
-              Contacto
+            <a href="#descargas" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+              Descargas
             </a>
-          </li>
-          <li className="navbar-item">
-            <button className="navbar-cta">
-              Comenzar Aventura
-            </button>
           </li>
         </ul>
 

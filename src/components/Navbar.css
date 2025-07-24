@@ -5,9 +5,9 @@
   left: 0;
   right: 0;
   background: linear-gradient(135deg, 
-    rgba(46, 80, 22, 0.95) 0%, 
-    rgba(93, 64, 55, 0.95) 50%, 
-    rgba(74, 124, 35, 0.95) 100%
+    rgba(107, 142, 35, 0.95) 0%, 
+    rgba(124, 160, 49, 0.98) 50%, 
+    rgba(107, 142, 35, 0.95) 100%
   );
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -16,8 +16,8 @@
   padding: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
-    0 4px 32px rgba(46, 80, 22, 0.2),
-    0 2px 8px rgba(93, 64, 55, 0.1);
+    0 4px 32px rgba(107, 142, 35, 0.3),
+    0 2px 8px rgba(107, 142, 35, 0.1);
 }
 
 .navbar-container {
@@ -57,7 +57,7 @@
 .navbar-logo:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(46, 80, 22, 0.3);
+  box-shadow: 0 8px 24px rgba(107, 142, 35, 0.4);
 }
 
 .navbar-logo:hover::before {
@@ -76,10 +76,10 @@
 }
 
 .navbar-logo h2 {
-  color: var(--pure-white);
+  color: var(--blanco);
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   background: linear-gradient(135deg, #ffffff, #e8f5e8);
@@ -104,7 +104,7 @@
 
 .navbar-link {
   text-decoration: none;
-  color: var(--pure-white);
+  color: var(--blanco);
   font-weight: 500;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
@@ -115,7 +115,7 @@
 }
 
 .navbar-link:hover {
-  color: var(--warm-beige);
+  color: #f0f8ff;
   transform: translateY(-2px);
 }
 
@@ -127,7 +127,7 @@
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, var(--wood-light), var(--accent-green));
+  background: linear-gradient(90deg, var(--naranja), var(--verde-vivo));
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
 }
@@ -138,8 +138,8 @@
 
 /* Professional CTA Button */
 .navbar-cta {
-  background: linear-gradient(135deg, var(--pure-white) 0%, var(--warm-beige) 100%);
-  color: var(--primary-green);
+  background: linear-gradient(135deg, var(--blanco) 0%, #f0f8ff 100%);
+  color: var(--verde-pasto);
   border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 12px 24px;
   border-radius: 50px;

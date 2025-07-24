@@ -8,17 +8,17 @@ const BottomNav = () => {
           <div className="bottom-nav-icon">🏠</div>
           <span>Inicio</span>
         </a>
-        <a href="#servicios" className="bottom-nav-item">
-          <div className="bottom-nav-icon">⚡</div>
-          <span>Servicios</span>
+        <a href="#quienes-somos" className="bottom-nav-item">
+          <div className="bottom-nav-icon">👥</div>
+          <span>Nosotros</span>
         </a>
         <a href="#recetas" className="bottom-nav-item">
           <div className="bottom-nav-icon">🥗</div>
           <span>Recetas</span>
         </a>
-        <a href="#contacto" className="bottom-nav-item">
-          <div className="bottom-nav-icon">📞</div>
-          <span>Contacto</span>
+        <a href="#descargas" className="bottom-nav-item">
+          <div className="bottom-nav-icon">�</div>
+          <span>App</span>
         </a>
       </div>
     </nav>

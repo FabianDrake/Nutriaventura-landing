@@ -34,8 +34,8 @@
 
 .bottom-nav-item:hover,
 .bottom-nav-item:active {
-  color: #4a7c23;
-  background: rgba(74, 124, 35, 0.1);
+  color: var(--azul);
+  background: rgba(59, 183, 255, 0.1);
 }
 
 .bottom-nav-icon {
