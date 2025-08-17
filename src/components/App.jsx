@@ -46,9 +46,6 @@ function App() {
               <div className="feature-pill">📱 Fácil de Usar  <br /></div>
             </div>
             
-            
-            
-            
             <div className="hero-logo-container">
               <img src={logo} className="hero-logo" alt="NutriAventura Logo" />
             </div>

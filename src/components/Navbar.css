@@ -76,16 +76,12 @@
 }
 
 .navbar-logo h2 {
-  color: var(--blanco);
+  color: #ffffff;
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #ffffff, #e8f5e8);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Professional Menu */
@@ -104,7 +100,7 @@
 
 .navbar-link {
   text-decoration: none;
-  color: var(--blanco);
+  color: #ffffff;
   font-weight: 500;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
