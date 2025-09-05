@@ -4,6 +4,9 @@ import BottomNav from './BottomNav'
 import RecipeCarousel from './RecipeCarousel'
 import logo from '../assets/logoR.png'
 import fondoInicio from '../assets/fondo_inicio.png'
+import facebookIcon from '../assets/facebook_icon.png'
+import instagramIcon from '../assets/Instagram_icon.png'
+import tiktokIcon from '../assets/Tiktok_icon.png'
 import './App.css'
 
 function App() {
@@ -312,21 +315,20 @@ function App() {
           <h3>NutriAventura</h3>
           <p>Transformando vidas a través de la nutrición consciente y la gamificación.</p>
           <p>Únete a nuestra comunidad y descubre una nueva forma de relacionarte con la comida.</p>
-          
-          <div className="footer-navigation" style={{ margin: '2rem 0' }}>
-            <a href="#inicio" className="footer-nav-link">Inicio</a>
-            <a href="#quienes-somos" className="footer-nav-link">Nosotros</a>
-            <a href="#recetas" className="footer-nav-link">Recetas</a>
-            <a href="#descargas" className="footer-nav-link">Descargar</a>
-            <a href="#creadores" className="footer-nav-link">Equipo</a>
-          </div>
+        
           
           <div className="footer-social">
             <h4>Síguenos en Redes Sociales</h4>
             <div className="social-links">
-              <a href="https://www.facebook.com/share/1MsTKxxaxL/" className="social-link">📘 Facebook</a>
-              <a href="https://www.instagram.com/nutriaventura_app?igsh=bmdmYzFxZnBtNTVs" className="social-link">📷 Instagram</a>
-              <a href="https://www.tiktok.com/@nutriaventura_app?_t=ZS-8zF8QvEE8bl&_r=1" className="social-link">🐦 TikTok</a>
+              <a href="https://www.facebook.com/share/1MsTKxxaxL/" className="social-link">
+                <img src={facebookIcon} alt="Facebook" className="social-icon" />
+              </a>
+              <a href="https://www.instagram.com/nutriaventura_app?igsh=bmdmYzFxZnBtNTVs" className="social-link">
+                <img src={instagramIcon} alt="Instagram" className="social-icon" />
+              </a>
+              <a href="https://www.tiktok.com/@nutriaventura_app?_t=ZS-8zF8QvEE8bl&_r=1" className="social-link">
+                <img src={tiktokIcon} alt="TikTok" className="social-icon" />
+              </a>
             </div>
           </div>
           
