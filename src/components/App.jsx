@@ -24,27 +24,16 @@ function App() {
           }}
         >
           <div className="hero-content">
-            <div className="hero-badge">
-              🌟 
-            <br />
-
-            </div>
+            
             
             <h1>
               <span className="hero-highlight">NutriAventura</span><br />
-              Tu Compañero de Vida Saludable
+              Vida Saludable para tu hijo
             </h1>
             
             <p className="hero-description">
-              Únete a más de <strong>10,000 usuarios</strong> que ya transformaron su estilo de vida. 
-              Descubre recetas personalizadas, alcanza tus metas y convierte cada comida en una aventura.
+              Únete a más de <strong>10 usuarios</strong>.
             </p>
-            
-            <div className="hero-features">
-              <div className="feature-pill">🎯 100% Personalizado</div>
-              <div className="feature-pill">🎮 Gamificado</div>
-              <div className="feature-pill">📱 Fácil de Usar  <br /></div>
-            </div>
             
             <div className="hero-logo-container">
               <img src={logo} className="hero-logo" alt="NutriAventura Logo" />
@@ -65,9 +54,9 @@ function App() {
             <div className="section-badge">Sobre Nosotros</div>
             <h2>¿Quiénes Somos?</h2>
             <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <p>Somos un equipo apasionado de nutricionistas, desarrolladores y diseñadores que creemos firmemente en el poder transformador de una alimentación consciente.</p>
-              <p>NutriAventura nació de la visión de hacer que la nutrición saludable sea accesible, divertida y personalizada para cada persona, combinando ciencia nutricional avanzada con elementos de gamificación.</p>
-              
+              <p>Somos un equipo apasionado de desarrolladores y diseñadores de software que creemos firmemente en el poder transformador de una alimentación consciente.</p>
+              <p>NutriAventura nació de la visión de hacer que la nutrición saludable sea accesible y personalizada para cada niño, combinando ciencia nutricional con tecnología innovadora de Inteligencia Artificial.</p>
+
               <div className="section-stats" style={{ marginTop: '3rem' }}>
                 <div className="stat-item">
                   <div className="stat-number">🎯</div>
@@ -75,9 +64,9 @@ function App() {
                   <p>Planes únicos para ti</p>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">🎮</div>
-                  <h4>Gamificado</h4>
-                  <p>Hacer dieta divertido</p>
+                  <div className="stat-number">🥬</div>
+                  <h4>Accesible</h4>
+                  <p>Con versión gratuita</p>
                 </div>
                 <div className="stat-item">
                   <div className="stat-number">🔬</div>
@@ -125,11 +114,6 @@ function App() {
             
             <div style={{ marginTop: '4rem' }}>
               <RecipeCarousel />
-            </div>
-            
-            <div className="recipe-cta" style={{ marginTop: '3rem' }}>
-              <p>¿Te gustaron las recetas?</p>
-              <a href="#descargas" className="btn btn-primary">Descarga la App para Más</a>
             </div>
           </div>
         </section>
@@ -223,19 +207,20 @@ function App() {
               <div className="creator-card">
                 <div className="creator-image">👨‍💻</div>
                 <h3>Fabian Talavera</h3>
-                <p><strong>🍎 Nutricionista Principal</strong></p>
-                <p>Especialista en nutrición deportiva con más de 10 años de experiencia en la creación de planes alimenticios personalizados.</p>
+                <p><strong>💻 Proyect Manager</strong></p>
+                <p>Apasionado desarrollador Frontend, constructor de interfaces creativas y experiencia de usuario</p>
                 <div className="creator-expertise">
-                  <span className="expertise-tag">Nutrición Deportiva</span>
-                  <span className="expertise-tag">Planes Personalizados</span>
+                  <span className="expertise-tag">Desarrollador FrontEnd</span>
+                  <span className="expertise-tag">Diseño de Aplicacion y UX Design</span>
+                  <span className="expertise-tag">Creador del proyecto</span>
                 </div>
               </div>
               
               <div className="creator-card">
-                <div className="creator-image">👩‍💻</div>
+                <div className="creator-image">👨‍💻</div>
                 <h3>Axel Flores</h3>
                 <p><strong>💻 Desarrollador Frontend</strong></p>
-                <p>Experto en experiencia de usuario y diseño de interfaces que hacen que la tecnología sea accesible y atractiva.</p>
+                <p>Experto en desarrollo de aplicaciones móviles con React Native.</p>
                 <div className="creator-expertise">
                   <span className="expertise-tag">React Native</span>
                   <span className="expertise-tag">UX Design</span>
@@ -243,20 +228,25 @@ function App() {
               </div>
               
               <div className="creator-card">
-                <div className="creator-image">👨‍🎨</div>
+                <div className="creator-image">👨‍💻</div>
                 <h3>Diego Soto</h3>
-                <p><strong>🎨 Diseñador UX/UI</strong></p>
-                <p>Creativo apasionado por diseñar experiencias digitales que conecten emocionalmente con los usuarios.</p>
+                <p><strong>💻 Desarrollador Backend</strong></p>
+                <p>Apasionado por crear soluciones innovadoras que mejoren la experiencia del usuario.</p>
                 <div className="creator-expertise">
                   <span className="expertise-tag">UI Design</span>
+                  <span className="expertise-tag">Database Management</span>
+                </div>
+              </div>
+              <div className="creator-card">
+                <div className="creator-image">👨‍💻</div>
+                <h3>Manuel Rios</h3>
+                <p><strong>💻 Desarrollador Backend</strong></p>
+                <p>Creativo apasionado por el tema de la Inteligencia artificial.</p>
+                <div className="creator-expertise">
+                  <span className="expertise-tag">IA Design</span>
                   <span className="expertise-tag">Gamificación</span>
                 </div>
               </div>
-            </div>
-            
-            <div className="team-cta" style={{ marginTop: '4rem' }}>
-              <p>¿Quieres formar parte de nuestro equipo?</p>
-              <a href="#footer" className="btn btn-secondary">Contáctanos</a>
             </div>
           </div>
         </section>
@@ -334,10 +324,9 @@ function App() {
           <div className="footer-social">
             <h4>Síguenos en Redes Sociales</h4>
             <div className="social-links">
-              <a href="#" className="social-link">📘 Facebook</a>
-              <a href="#" className="social-link">📷 Instagram</a>
-              <a href="#" className="social-link">🐦 Twitter</a>
-              <a href="#" className="social-link">💼 LinkedIn</a>
+              <a href="https://www.facebook.com/share/1MsTKxxaxL/" className="social-link">📘 Facebook</a>
+              <a href="https://www.instagram.com/nutriaventura_app?igsh=bmdmYzFxZnBtNTVs" className="social-link">📷 Instagram</a>
+              <a href="https://www.tiktok.com/@nutriaventura_app?_t=ZS-8zF8QvEE8bl&_r=1" className="social-link">🐦 TikTok</a>
             </div>
           </div>
           
