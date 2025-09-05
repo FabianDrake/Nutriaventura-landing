@@ -29,10 +29,14 @@ function App() {
           <div className="hero-content">
             
             
-            <h1>
-              <span className="hero-highlight">NutriAventura</span><br />
-              Vida Saludable para tu hijo
-            </h1>
+            <div className="hero-titles">
+              <h1 className="hero-main-title">
+                <span className="hero-highlight">NutriAventura</span>
+              </h1>
+              <h2 className="hero-subtitle">
+                Vida Saludable para tu hijo
+              </h2>
+            </div>
             
             <p className="hero-description">
               Únete a más de <strong>10 usuarios</strong>.
