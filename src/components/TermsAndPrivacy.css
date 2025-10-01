@@ -1,0 +1,146 @@
+/* TermsAndPrivacy.css */
+
+.terms-privacy-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding-top: 120px; /* Espacio para el navbar fijo */
+  padding-bottom: 2rem;
+}
+
+.terms-privacy-section .card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.terms-privacy-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.terms-privacy-section .card-header {
+  border-bottom: none;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--bs-primary) 0%, #0056b3 100%) !important;
+}
+
+.terms-privacy-section .card-header.bg-success {
+  background: linear-gradient(135deg, var(--bs-success) 0%, #0f5132 100%) !important;
+}
+
+.terms-privacy-section .card-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.terms-privacy-section .card-body {
+  line-height: 1.7;
+  color: #495057;
+}
+
+.terms-privacy-section .lead {
+  font-size: 1.1rem;
+  color: #6c757d;
+  border-left: 4px solid #007bff;
+  padding-left: 1rem;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.terms-privacy-section .bg-success + .card-body .lead {
+  border-left-color: #28a745;
+}
+
+.terms-privacy-section h4 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.terms-privacy-section p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.terms-privacy-section .alert {
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.terms-privacy-section .btn {
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.terms-privacy-section .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.terms-privacy-section .btn-primary:hover {
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.terms-privacy-section .btn-outline-primary:hover {
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .terms-privacy-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .terms-privacy-section .card-body {
+    padding: 2rem !important;
+  }
+  
+  .terms-privacy-section .card-header {
+    padding: 1rem;
+  }
+  
+  .terms-privacy-section .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .terms-privacy-section h4 {
+    font-size: 1.1rem;
+  }
+  
+  .terms-privacy-section .btn-lg {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .terms-privacy-section .card-body {
+    padding: 1.5rem !important;
+  }
+  
+  .terms-privacy-section .lead {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+  
+  .terms-privacy-section p {
+    text-align: left;
+  }
+}
+
+/* Smooth scrolling enhancement */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import BottomNav from './BottomNav'
 import RecipeCarousel from './RecipeCarousel'
+import TermsAndPrivacy from './TermsAndPrivacy'
 import logo from '../assets/logoR.png'
 import fondoInicio from '../assets/fondo_inicio.png'
 import facebookIcon from '../assets/facebook_icon.png'
@@ -10,16 +11,70 @@ import tiktokIcon from '../assets/Tiktok_icon.png'
 import './App.css'
 
 function App() {
+  const [currentView, setCurrentView] = useState('home')
+
+  // Detectar cambios en el hash de la URL
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1) // Quitar el #
+      if (hash === 'terminos-condiciones') {
+        setCurrentView('terms')
+      } else {
+        setCurrentView('home')
+      }
+    }
+
+    // Ejecutar al cargar la página
+    handleHashChange()
+
+    // Escuchar cambios en el hash
+    window.addEventListener('hashchange', handleHashChange)
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+    }
+  }, [])
+
+  // Función para navegar
+  const navigateToTerms = () => {
+    window.location.hash = 'terminos-condiciones'
+    setCurrentView('terms')
+  }
+
+  const navigateToHome = () => {
+    window.location.hash = ''
+    setCurrentView('home')
+  }
+
+  // Función para ir al inicio de la página
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  // Si estamos en la vista de términos, mostrar solo esa vista
+  if (currentView === 'terms') {
+    return (
+      <>
+        <Navbar navigateToHome={navigateToHome} />
+        <TermsAndPrivacy navigateToHome={navigateToHome} />
+      </>
+    )
+  }
+
+  // Vista principal (home)
   return (
     <>
-      <Navbar />
+      <Navbar navigateToTerms={navigateToTerms} navigateToHome={navigateToHome} />
       <main>
-        {/* Hero Section */}
+        {/* Hero Section - Mejorado */}
         <section 
           id="inicio" 
           className="hero-section" 
           style={{ 
-            backgroundImage: `linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 255, 0.8) 50%, rgba(250, 250, 250, 0.9) 100%), url(${fondoInicio})`,
+            backgroundImage: `linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 255, 0.9) 50%, rgba(250, 250, 250, 0.95) 100%), url(${fondoInicio})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -27,23 +82,58 @@ function App() {
           }}
         >
           <div className="hero-content">
-            
+            <div className="hero-badge">
+              <span className="badge-text">🌟 Nueva Experiencia en Nutrición</span>
+            </div>
             
             <div className="hero-titles">
               <h1 className="hero-main-title">
                 <span className="hero-highlight">NutriAventura</span>
               </h1>
               <h2 className="hero-subtitle">
-                Vida Saludable para tu hijo
+                Transformando la nutrición infantil con 
+                <span className="highlight-text"> inteligencia artificial</span>
               </h2>
             </div>
             
             <p className="hero-description">
-              Únete a más de <strong>10 usuarios</strong>.
+              Únete a mejorar la alimentacion de tu <strong className="stats-highlight">familia</strong> con nuestra nueva plataforma.
             </p>
             
+            <div className="hero-cta-buttons">
+              <a href="#descargas" className="btn-primary-hero">
+                <span>📱</span>
+                Descargar App
+              </a>
+              <a href="#quienes-somos" className="btn-secondary-hero">
+                <span>🎯</span>
+                Conocer Más
+              </a>
+            </div>
+
+            <div className="hero-features">
+              <div className="feature-item">
+                <span className="feature-icon">🎮</span>
+                <span className="feature-text">Entretenido</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">🤖</span>
+                <span className="feature-text">IA Personalizada</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">📊</span>
+                <span className="feature-text">Análisis Nutricional</span>
+              </div>
+            </div>
+            
             <div className="hero-logo-container">
-              <img src={logo} className="hero-logo" alt="NutriAventura Logo" />
+              <img 
+                src={logo} 
+                className="hero-logo animate-float clickable-logo" 
+                alt="NutriAventura Logo" 
+                onClick={scrollToTop}
+                style={{ cursor: 'pointer' }}
+              />
             </div>
             
             <div className="scroll-indicator">
@@ -55,51 +145,136 @@ function App() {
           </div>
         </section>
 
-        {/* Quiénes Somos Section */}
-        <section id="quienes-somos" className="section">
+        {/* Quiénes Somos Section - Rediseñada */}
+        <section id="quienes-somos" className="section-modern about-section">
           <div className="container">
-            <div className="section-badge">Sobre Nosotros</div>
-            <h2>¿Quiénes Somos?</h2>
-            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <p>Somos un equipo apasionado de desarrolladores y diseñadores de software que creemos firmemente en el poder transformador de una alimentación consciente.</p>
-              <p>NutriAventura nació de la visión de hacer que la nutrición saludable sea accesible y personalizada para cada niño, combinando ciencia nutricional con tecnología innovadora de Inteligencia Artificial.</p>
+            <div className="section-header">
+              <div className="section-badge">
+                <span className="badge-icon">👥</span>
+                Sobre Nosotros
+              </div>
+              <h2 className="section-title">¿Quiénes Somos?</h2>
+              <p className="section-subtitle">
+                Un equipo apasionado que revoluciona la nutrición infantil
+              </p>
+            </div>
+            
+            <div className="about-content">
+              <div className="about-text">
+                <div className="about-card">
+                  <div className="card-icon">🎯</div>
+                  <h3>Nuestra Historia</h3>
+                  <p>
+                    Somos un equipo apasionado de desarrolladores y diseñadores de software que creemos 
+                    firmemente en el poder transformador de una alimentación consciente.
+                  </p>
+                </div>
+                
+                <div className="about-card">
+                  <div className="card-icon">🚀</div>
+                  <h3>Nuestra Innovación</h3>
+                  <p>
+                    NutriAventura nació de la visión de hacer que la nutrición saludable sea accesible 
+                    y personalizada para cada niño, combinando ciencia nutricional con tecnología 
+                    innovadora de Inteligencia Artificial.
+                  </p>
+                </div>
+              </div>
 
-              <div className="section-stats" style={{ marginTop: '3rem' }}>
-                <div className="stat-item">
-                  <div className="stat-number">🎯</div>
-                  <h4>Personalizado</h4>
-                  <p>Planes únicos para ti</p>
+              <div className="about-stats">
+                <div className="stat-card">
+                  <div className="stat-icon">🎯</div>
+                  <div className="stat-content">
+                    <h4>Personalizado</h4>
+                    <p>Planes únicos para cada niño</p>
+                    <span className="stat-number">100%</span>
+                  </div>
                 </div>
-                <div className="stat-item">
-                  <div className="stat-number">🥬</div>
-                  <h4>Accesible</h4>
-                  <p>Con versión gratuita</p>
+                
+                <div className="stat-card">
+                  <div className="stat-icon">🥬</div>
+                  <div className="stat-content">
+                    <h4>Accesible</h4>
+                    <p>Versión gratuita disponible</p>
+                    <span className="stat-number">Free</span>
+                  </div>
                 </div>
-                <div className="stat-item">
-                  <div className="stat-number">🔬</div>
-                  <h4>Científico</h4>
-                  <p>Basado en evidencia</p>
+                
+                <div className="stat-card">
+                  <div className="stat-icon">🔬</div>
+                  <div className="stat-content">
+                    <h4>Analizado</h4>
+                    <p>Basado en tus preferencias</p>
+                    <span className="stat-number">100%</span>
+                  </div>
                 </div>
+                
+                
               </div>
             </div>
           </div>
         </section>
 
-        {/* Misión y Visión Section */}
-        <section id="mision-vision" className="section">
+        {/* Misión y Visión Section - Rediseñada */}
+        <section id="mision-vision" className="section-modern mission-section">
           <div className="container">
-            <div className="section-badge">Nuestro Propósito</div>
-            <h2>Misión y Visión</h2>
-            <div className="grid grid-2" style={{ marginTop: '4rem' }}>
-              <div className="mission-card">
-                <div className="mission-icon">🚀</div>
-                <h3>Nuestra Misión</h3>
-                <p>Democratizar el acceso a una nutrición de calidad mediante tecnología innovadora que transforma los hábitos alimenticios en experiencias gamificadas y personalizadas.</p>
+            <div className="section-header">
+              <div className="section-badge">
+                <span className="badge-icon">🎯</span>
+                Nuestro Propósito
               </div>
-              <div className="mission-card">
-                <div className="mission-icon">🌟</div>
-                <h3>Nuestra Visión</h3>
-                <p>Ser la plataforma líder mundial en nutrición gamificada, creando una comunidad global donde millones de personas disfruten del proceso de comer saludable.</p>
+              <h2 className="section-title">Misión y Visión</h2>
+              <p className="section-subtitle">
+                Transformando el futuro de la nutrición infantil
+              </p>
+            </div>
+            
+            <div className="mission-vision-grid">
+              <div className="mission-vision-card mission-card">
+                <div className="card-header">
+                  <div className="card-icon-large">🚀</div>
+                  <h3>Nuestra Misión</h3>
+                </div>
+                <div className="card-content">
+                  <p>
+                    Democratizar el acceso a una nutrición de calidad mediante tecnología 
+                    innovadora que transforma los hábitos alimenticios en experiencias 
+                    gamificadas y personalizadas.
+                  </p>
+                  <div className="mission-features">
+                    
+                    <div className="feature-tag">🤖 IA Personalizada</div>
+                    <div className="feature-tag">📚 Educación</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mission-vision-card vision-card">
+                <div className="card-header">
+                  <div className="card-icon-large">🌟</div>
+                  <h3>Nuestra Visión</h3>
+                </div>
+                <div className="card-content">
+                  <p>
+                    Ser la plataforma líder mundial en nutrición gamificada, creando una 
+                    comunidad global donde millones de personas disfruten del proceso 
+                    de comer saludable.
+                  </p>
+                  <div className="vision-goals">
+                    <div className="goal-item">
+                      <span className="goal-icon">🌍</span>
+                      <span>Impacto Social</span>
+                    </div>
+                    <div className="goal-item">
+                      <span className="goal-icon">👨‍👩‍👧‍👦</span>
+                      <span>Millones de Familias</span>
+                    </div>
+                    <div className="goal-item">
+                      <span className="goal-icon">💪</span>
+                      <span>Salud Sostenible</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -112,12 +287,7 @@ function App() {
             <h2>Recetas Nutritivas</h2>
             <p>Descubre un mundo de sabores saludables con nuestras recetas cuidadosamente seleccionadas. Cada plato es una aventura culinaria que nutre tu cuerpo y deleita tu paladar.</p>
             
-            <div className="recipe-features" style={{ marginTop: '2rem', marginBottom: '3rem' }}>
-              <div className="feature-tag">⚡ Rápidas</div>
-              <div className="feature-tag">🥗 Saludables</div>
-              <div className="feature-tag">😋 Deliciosas</div>
-              <div className="feature-tag">📱 Paso a paso</div>
-            </div>
+            
             
             <div style={{ marginTop: '4rem' }}>
               <RecipeCarousel />
@@ -132,23 +302,7 @@ function App() {
             <h2>Descarga Nuestra App</h2>
             <p>¡Lleva NutriAventura contigo! Descarga nuestra aplicación y comienza tu viaje hacia una vida más saludable.</p>
             
-            <div className="download-benefits" style={{ margin: '3rem 0' }}>
-              <div className="benefit-item">
-                <div className="benefit-icon">📊</div>
-                <h4>Seguimiento Personalizado</h4>
-                <p>Monitorea tu progreso</p>
-              </div>
-              <div className="benefit-item">
-                <div className="benefit-icon">🎯</div>
-                <h4>Metas Alcanzables</h4>
-                <p>Objetivos adaptados a ti</p>
-              </div>
-              <div className="benefit-item">
-                <div className="benefit-icon">👥</div>
-                <h4>Comunidad Activa</h4>
-                <p>Apoyo y motivación</p>
-              </div>
-            </div>
+            
             
             <div className="qr-section" style={{ marginTop: '4rem' }}>
               <div className="qr-container">
@@ -257,94 +411,64 @@ function App() {
             </div>
           </div>
         </section>
-
-        {/* Terms Section */}
-        <section id="terminos" className="section">
-          <div className="container">
-            <div className="section-badge">Información Legal</div>
-            <h2>Términos y Condiciones</h2>
-            <p>Información importante sobre el uso de NutriAventura</p>
-            
-            <div className="terms-summary" style={{ margin: '3rem 0' }}>
-              <div className="term-card">
-                <div className="term-icon">✅</div>
-                <h4>Uso Seguro</h4>
-                <p>App diseñada para fines educativos e informativos</p>
-              </div>
-              <div className="term-card">
-                <div className="term-icon">🔒</div>
-                <h4>Privacidad</h4>
-                <p>Tus datos están protegidos y seguros</p>
-              </div>
-              <div className="term-card">
-                <div className="term-icon">⚖️</div>
-                <h4>Responsabilidad</h4>
-                <p>Consulta siempre con profesionales de la salud</p>
-              </div>
-            </div>
-            
-            <div className="terms-details" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto', marginTop: '3rem' }}>
-              <details className="term-section">
-                <summary><strong>1. Aceptación de los Términos</strong></summary>
-                <p>Al utilizar NutriAventura, aceptas estos términos y condiciones en su totalidad.</p>
-              </details>
-              
-              <details className="term-section">
-                <summary><strong>2. Uso de la Aplicación</strong></summary>
-                <p>NutriAventura está diseñada para fines educativos e informativos. Siempre consulta con un profesional de la salud antes de realizar cambios significativos en tu dieta.</p>
-              </details>
-              
-              <details className="term-section">
-                <summary><strong>3. Privacidad de Datos</strong></summary>
-                <p>Protegemos tu información personal según nuestra política de privacidad. No compartimos tus datos con terceros sin tu consentimiento.</p>
-              </details>
-              
-              <details className="term-section">
-                <summary><strong>4. Responsabilidad</strong></summary>
-                <p>El usuario es responsable del uso apropiado de la información proporcionada por la aplicación.</p>
-              </details>
-              
-              <details className="term-section">
-                <summary><strong>5. Modificaciones</strong></summary>
-                <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios se notificarán a través de la aplicación.</p>
-              </details>
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
       <footer id="footer" className="footer">
+        <div className="footer-background"></div>
         <div className="footer-content">
-          <h3>NutriAventura</h3>
-          <p>Transformando vidas a través de la nutrición consciente y la gamificación.</p>
-          <p>Únete a nuestra comunidad y descubre una nueva forma de relacionarte con la comida.</p>
-        
+          <div className="footer-main">
+            <div className="footer-brand">
+              <div className="footer-logo" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
+                <img src={logo} alt="NutriAventura Logo" className="footer-logo-img" />
+                <h3>NutriAventura</h3>
+              </div>
+    
+            </div>
+            
+            <div className="footer-sections">
+              
+              
+              <div className="footer-contact">
+                <h4>Contacto</h4>
+                <div className="contact-info">
+                  <p><span className="contact-icon">📧</span> nutriaventura.app@gmail.com</p>
+                  <p><span className="contact-icon">📱</span> +52 (33) 123-4567</p>
+                  <p><span className="contact-icon">📍</span> Guadalajara, México</p>
+                </div>
+              </div>
+            </div>
+          </div>
           
           <div className="footer-social">
             <h4>Síguenos en Redes Sociales</h4>
             <div className="social-links">
-              <a href="https://www.facebook.com/share/1MsTKxxaxL/" className="social-link">
+              <a href="https://www.facebook.com/share/1MsTKxxaxL/" className="social-link facebook">
                 <img src={facebookIcon} alt="Facebook" className="social-icon" />
+                <span>Facebook</span>
               </a>
-              <a href="https://www.instagram.com/nutriaventura_app?igsh=bmdmYzFxZnBtNTVs" className="social-link">
+              <a href="https://www.instagram.com/nutriaventura_app?igsh=bmdmYzFxZnBtNTVs" className="social-link instagram">
                 <img src={instagramIcon} alt="Instagram" className="social-icon" />
+                <span>Instagram</span>
               </a>
-              <a href="https://www.tiktok.com/@nutriaventura_app?_t=ZS-8zF8QvEE8bl&_r=1" className="social-link">
+              <a href="https://www.tiktok.com/@nutriaventura_app?_t=ZS-8zF8QvEE8bl&_r=1" className="social-link tiktok">
                 <img src={tiktokIcon} alt="TikTok" className="social-icon" />
+                <span>TikTok</span>
               </a>
             </div>
           </div>
           
-          <div className="footer-contact" style={{ margin: '2rem 0' }}>
-            <h4>¿Tienes preguntas?</h4>
-            <p>📧 contacto@nutriaventura.com</p>
-            <p>📱 +1 (555) 123-4567</p>
+          <div className="footer-bottom">
+            <div className="footer-divider"></div>
+            <div className="footer-copyright">
+              <p>&copy; 2025 NutriAventura. Todos los derechos reservados.</p>
+              <div className="footer-legal">
+                <a href="#" onClick={(e) => { e.preventDefault(); navigateToTerms(); }}>Términos y Condiciones</a>
+                <span>•</span>
+                <a href="#" onClick={(e) => { e.preventDefault(); navigateToTerms(); }}>Política de Privacidad</a>
+              </div>
+            </div>
           </div>
-          
-          <p style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-            &copy; 2025 NutriAventura. Todos los derechos reservados.
-          </p>
         </div>
       </footer>
       
