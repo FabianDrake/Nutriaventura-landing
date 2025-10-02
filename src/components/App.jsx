@@ -306,9 +306,9 @@ function App() {
             
             
             
-            <div style={{ marginTop: '4rem' }}>
+            {/* <div style={{ marginTop: '4rem' }}>
               <RecipeCarousel />
-            </div>
+            </div> */}
           </div>
         </section>
 
