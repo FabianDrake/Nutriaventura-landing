@@ -83,7 +83,7 @@ function App() {
         >
           <div className="hero-content">
             <div className="hero-badge">
-              <span className="badge-text">🌟 Nueva Experiencia en Nutrición</span>
+              <span className="badge-text">🌟 Nueva Experiencia Culinaria</span>
             </div>
             
             <div className="hero-titles">
@@ -91,14 +91,31 @@ function App() {
                 <span className="hero-highlight">NutriAventura</span>
               </h1>
               <h2 className="hero-subtitle">
-                Transformando la nutrición infantil con 
+                Mejorando las comidas familiares con 
                 <span className="highlight-text"> inteligencia artificial</span>
               </h2>
             </div>
             
             <p className="hero-description">
-              Únete a mejorar la alimentacion de tu <strong className="stats-highlight">familia</strong> con nuestra nueva plataforma.
+              Únete a crear <strong className="stats-highlight">mejores comidas familiares</strong> con nuestra nueva plataforma de ideas culinarias.
             </p>
+            
+            <div className="disclaimer-box" style={{
+              background: 'rgba(255, 243, 205, 0.9)',
+              border: '2px solid #FFA726',
+              borderRadius: '12px',
+              padding: '1rem',
+              margin: '1.5rem 0',
+              fontSize: '0.9rem',
+              textAlign: 'center',
+              color: '#F57F17'
+            }}>
+              <p style={{ margin: 0, fontWeight: '600' }}>
+                ⚠️ <strong>Importante:</strong> Esta app es solo para ayudar a los papás a mejorar sus comidas familiares. 
+                NO es para diagnósticos médicos ni pretende ser la verdad absoluta. 
+                Siempre consulta con profesionales de la salud para decisiones importantes sobre alimentación.
+              </p>
+            </div>
             
             <div className="hero-cta-buttons">
               <a href="#descargas" className="btn-primary-hero">
@@ -122,7 +139,7 @@ function App() {
               </div>
               <div className="feature-item">
                 <span className="feature-icon">📊</span>
-                <span className="feature-text">Análisis Nutricional</span>
+                <span className="feature-text">Análisis de Comidas</span>
               </div>
             </div>
             
@@ -155,7 +172,7 @@ function App() {
               </div>
               <h2 className="section-title">¿Quiénes Somos?</h2>
               <p className="section-subtitle">
-                Un equipo apasionado que revoluciona la nutrición infantil
+                Un equipo apasionado que ayuda a las familias a cocinar mejor
               </p>
             </div>
             
@@ -166,7 +183,7 @@ function App() {
                   <h3>Nuestra Historia</h3>
                   <p>
                     Somos un equipo apasionado de desarrolladores y diseñadores de software que creemos 
-                    firmemente en el poder transformador de una alimentación consciente.
+                    firmemente en el poder de crear mejores momentos familiares alrededor de la comida.
                   </p>
                 </div>
                 
@@ -174,8 +191,8 @@ function App() {
                   <div className="card-icon">🚀</div>
                   <h3>Nuestra Innovación</h3>
                   <p>
-                    NutriAventura nació de la visión de hacer que la nutrición saludable sea accesible 
-                    y personalizada para cada niño, combinando ciencia nutricional con tecnología 
+                    NutriAventura nació de la visión de hacer que cocinar en familia sea más fácil 
+                    y divertido para cada hogar, combinando ideas culinarias con tecnología 
                     innovadora de Inteligencia Artificial.
                   </p>
                 </div>
@@ -225,7 +242,7 @@ function App() {
               </div>
               <h2 className="section-title">Misión y Visión</h2>
               <p className="section-subtitle">
-                Transformando el futuro de la nutrición infantil
+                Transformando el futuro de las comidas familiares
               </p>
             </div>
             
@@ -237,14 +254,14 @@ function App() {
                 </div>
                 <div className="card-content">
                   <p>
-                    Democratizar el acceso a una nutrición de calidad mediante tecnología 
-                    innovadora que transforma los hábitos alimenticios en experiencias 
-                    gamificadas y personalizadas.
+                    Democratizar el acceso a mejores ideas culinarias mediante tecnología 
+                    innovadora que transforma el momento de cocinar en experiencias 
+                    gamificadas y personalizadas para toda la familia.
                   </p>
                   <div className="mission-features">
                     
                     <div className="feature-tag">🤖 IA Personalizada</div>
-                    <div className="feature-tag">📚 Educación</div>
+                    <div className="feature-tag">�‍👩‍👧‍👦 Comida Familiar</div>
                   </div>
                 </div>
               </div>
@@ -256,9 +273,9 @@ function App() {
                 </div>
                 <div className="card-content">
                   <p>
-                    Ser la plataforma líder mundial en nutrición gamificada, creando una 
-                    comunidad global donde millones de personas disfruten del proceso 
-                    de comer saludable.
+                    Ser la plataforma líder mundial en ideas culinarias gamificadas, creando una 
+                    comunidad global donde millones de familias disfruten del proceso 
+                    de cocinar y comer juntas.
                   </p>
                   <div className="vision-goals">
                     <div className="goal-item">
@@ -270,8 +287,8 @@ function App() {
                       <span>Millones de Familias</span>
                     </div>
                     <div className="goal-item">
-                      <span className="goal-icon">💪</span>
-                      <span>Salud Sostenible</span>
+                      <span className="goal-icon">🍽️</span>
+                      <span>Comidas Memorables</span>
                     </div>
                   </div>
                 </div>
@@ -283,9 +300,9 @@ function App() {
         {/* Recetas Section */}
         <section id="recetas" className="section">
           <div className="container">
-            <div className="section-badge">Nutrición Deliciosa</div>
-            <h2>Recetas Nutritivas</h2>
-            <p>Descubre un mundo de sabores saludables con nuestras recetas cuidadosamente seleccionadas. Cada plato es una aventura culinaria que nutre tu cuerpo y deleita tu paladar.</p>
+            <div className="section-badge">Cocina Deliciosa</div>
+            <h2>Recetas Familiares</h2>
+            <p>Descubre un mundo de sabores deliciosos con nuestras recetas cuidadosamente seleccionadas. Cada plato es una aventura culinaria que une a tu familia y deleita el paladar de todos.</p>
             
             
             
@@ -300,7 +317,7 @@ function App() {
           <div className="container text-center">
             <div className="section-badge">Comienza Ahora</div>
             <h2>Descarga Nuestra App</h2>
-            <p>¡Lleva NutriAventura contigo! Descarga nuestra aplicación y comienza tu viaje hacia una vida más saludable.</p>
+            <p>¡Lleva NutriAventura contigo! Descarga nuestra aplicación y comienza tu viaje hacia mejores comidas familiares.</p>
             
             
             

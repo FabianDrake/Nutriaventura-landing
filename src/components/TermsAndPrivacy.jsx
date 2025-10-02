@@ -45,13 +45,14 @@ const TermsAndPrivacy = ({ navigateToHome }) => {
                       2. Objeto y Naturaleza del Servicio
                     </h4>
                     <p className="text-justify">
-                      NutriAventura es una herramienta digital gamificada de carácter informativo y educativo, enfocada en promover hábitos alimenticios saludables en la población infantil.
+                      NutriAventura es una herramienta digital gamificada de carácter informativo, enfocada en ayudar a las familias a mejorar sus comidas caseras y crear mejores momentos alrededor de la mesa.
                     </p>
                     <p className="text-justify">El contenido disponible en La Aplicación:</p>
                     <ul className="text-start">
-                      <li>Tiene fines informativos y educativos únicamente.</li>
-                      <li><strong>NO sustituye el diagnóstico, orientación ni tratamiento médico profesional.</strong></li>
-                      <li>Las decisiones relacionadas con la alimentación o salud de un menor deben ser siempre supervisadas por un médico, pediatra o nutriólogo certificado.</li>
+                      <li>Tiene fines informativos y de entretenimiento culinario únicamente.</li>
+                      <li><strong>NO sustituye la consulta con profesionales en gastronomía o especialistas en alimentación.</strong></li>
+                      <li>Las decisiones relacionadas con la dieta de un menor deben ser siempre supervisadas por un pediatra o especialista certificado.</li>
+                      <li><strong>Esta aplicación es solo para ayudar a los papás a mejorar sus comidas familiares y NO pretende ser diagnóstico o verdad absoluta.</strong></li>
                     </ul>
                   </div>
 
@@ -102,7 +103,7 @@ const TermsAndPrivacy = ({ navigateToHome }) => {
                     <p className="text-justify">En la máxima medida permitida por la ley:</p>
                     <ul className="text-start">
                       <li>NutriAventura no garantiza que el servicio sea libre de errores, seguro o ininterrumpido.</li>
-                      <li>No será responsable de decisiones médicas, de salud o nutricionales basadas en el contenido de La Aplicación.</li>
+                      <li>No será responsable de decisiones culinarias o alimentarias basadas en el contenido de La Aplicación.</li>
                       <li>No responderá por daños directos, indirectos, incidentales o consecuentes derivados del uso o imposibilidad de uso de La Aplicación.</li>
                     </ul>
                   </div>
