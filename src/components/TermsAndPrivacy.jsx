@@ -35,7 +35,7 @@ const TermsAndPrivacy = ({ navigateToHome }) => {
                       1. Aceptación de los Términos
                     </h4>
                     <p className="text-justify">
-                      Bienvenido a NutriAventura ("La Aplicación"). Estos Términos y Condiciones ("Términos") regulan el acceso y uso que usted ("El Usuario") hace de nuestros servicios. Al descargar, instalar o utilizar La Aplicación, usted declara haber leído, comprendido y aceptado quedar legalmente obligado por los presentes Términos. Si no está de acuerdo, deberá abstenerse de utilizar La Aplicación.
+                      Bienvenido a NutriAventura. Estos Términos y Condiciones regulan el acceso y uso que usted hace de nuestros servicios. Al descargar, instalar o utilizar La Aplicación, usted declara haber leído, comprendido y aceptado quedar legalmente obligado por los presentes Términos. Si no está de acuerdo, deberá abstenerse de utilizar La Aplicación.
                     </p>
                   </div>
 
@@ -164,7 +164,7 @@ const TermsAndPrivacy = ({ navigateToHome }) => {
                       1. Identidad y Domicilio del Responsable
                     </h4>
                     <p className="text-justify">
-                      NutriAventura ("La Aplicación"), desarrollada por [Nombre del Desarrollador o Empresa] ("El Responsable"), con domicilio en [Dirección Completa], es responsable del tratamiento y protección de los datos personales recabados, en cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento.
+                      NutriAventura, desarrollada por Alumnos del Centro de Enseñanza Tecnica Industrial, es responsable del tratamiento y protección de los datos personales recabados, en cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento.
                     </p>
                   </div>
 
