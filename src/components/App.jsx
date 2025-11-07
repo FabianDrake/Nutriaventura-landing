@@ -8,6 +8,8 @@ import fondoInicio from '../assets/fondo_inicio.png'
 import facebookIcon from '../assets/facebook_icon.png'
 import instagramIcon from '../assets/Instagram_icon.png'
 import tiktokIcon from '../assets/Tiktok_icon.png'
+import Qr_store from '../assets/qr_store.jpeg'
+import googleplayIcon from '../assets/googleplay_icon.png'
 import './App.css'
 
 function App() {
@@ -323,40 +325,16 @@ function App() {
             
             <div className="qr-section" style={{ marginTop: '4rem' }}>
               <div className="qr-container">
-                <div className="qr-code">
-                  📱
-                </div>
+                <img src={Qr_store} alt="QR code" className="qr-code" />
                 <p><strong>Escanea el código QR</strong></p>
                 <p>O descarga directamente desde:</p>
                 
                 <div className="download-section">
-                  <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="google-play-button">
+                  <a href="https://play.google.com/store/apps/details?id=com.nutriaventura_front" target="_blank" rel="noopener noreferrer" className="google-play-button">
                     <div className="google-play-content">
                       <div className="google-play-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.609 1.814L13.792 12L3.609 22.186C3.538 22.257 3.5 22.353 3.5 22.453V1.547C3.5 1.647 3.538 1.743 3.609 1.814Z" fill="url(#paint0_linear)"/>
-                          <path d="M20.683 10.748L16.726 8.498L13.792 12L16.726 15.502L20.683 13.252C21.439 12.808 21.439 11.192 20.683 10.748Z" fill="url(#paint1_linear)"/>
-                          <path d="M13.792 12L3.609 1.814C4.362 1.061 5.638 1.262 6.753 1.978L13.792 12Z" fill="url(#paint2_linear)"/>
-                          <path d="M13.792 12L6.753 22.022C5.638 22.738 4.362 22.939 3.609 22.186L13.792 12Z" fill="url(#paint3_linear)"/>
-                          <defs>
-                            <linearGradient id="paint0_linear" x1="3.5" y1="1.547" x2="3.5" y2="22.453" gradientUnits="userSpaceOnUse">
-                              <stop stopColor="#00D4FF"/>
-                              <stop offset="1" stopColor="#007DFF"/>
-                            </linearGradient>
-                            <linearGradient id="paint1_linear" x1="13.792" y1="8.498" x2="20.683" y2="13.252" gradientUnits="userSpaceOnUse">
-                              <stop stopColor="#FFB300"/>
-                              <stop offset="1" stopColor="#FF8F00"/>
-                            </linearGradient>
-                            <linearGradient id="paint2_linear" x1="3.609" y1="1.814" x2="13.792" y2="12" gradientUnits="userSpaceOnUse">
-                              <stop stopColor="#00E676"/>
-                              <stop offset="1" stopColor="#00C853"/>
-                            </linearGradient>
-                            <linearGradient id="paint3_linear" x1="3.609" y1="22.186" x2="13.792" y2="12" gradientUnits="userSpaceOnUse">
-                              <stop stopColor="#FF1744"/>
-                              <stop offset="1" stopColor="#D50000"/>
-                            </linearGradient>
-                          </defs>
-                        </svg>
+                        {/* Use provided PNG for accurate Play icon */}
+                        <img src={googleplayIcon} alt="Google Play" className="google-play-img" />
                       </div>
                       <div className="google-play-text">
                         <span className="download-text">Disponible en</span>
@@ -381,51 +359,51 @@ function App() {
             <h2>Los Creadores de NutriAventura</h2>
             <p>Conoce a los profesionales apasionados que hacen posible tu aventura nutricional</p>
             
-            <div className="grid grid-3" style={{ marginTop: '4rem' }}>
-              <div className="creator-card">
-                <div className="creator-image">👨‍💻</div>
-                <h3>Fabian Talavera</h3>
-                <p><strong>💻 Proyect Manager</strong></p>
-                <p>Apasionado desarrollador Frontend, constructor de interfaces creativas y experiencia de usuario</p>
-                <div className="creator-expertise">
-                  <span className="expertise-tag">Desarrollador FrontEnd</span>
-                  <span className="expertise-tag">Diseño de Aplicacion y UX Design</span>
-                  <span className="expertise-tag">Creador del proyecto</span>
+                <div className="grid grid-3 creators-grid" style={{ marginTop: '4rem' }}>
+                  <div className="creator-card">
+                    <div className="creator-image">👨‍💻</div>
+                    <h3 className="creator-name">Fabian Talavera</h3>
+                    <p className="creator-role">💻 Project Manager</p>
+                    <p className="creator-bio">Apasionado desarrollador Frontend, constructor de interfaces creativas y experiencia de usuario.</p>
+                    <div className="creator-expertise">
+                      <span className="expertise-tag">Desarrollador FrontEnd</span>
+                      <span className="expertise-tag">Diseño de Aplicación</span>
+                      <span className="expertise-tag">UX Design</span>
+                    </div>
+                  </div>
+
+                  <div className="creator-card">
+                    <div className="creator-image">👨‍💻</div>
+                    <h3 className="creator-name">Axel Flores</h3>
+                    <p className="creator-role">💻 Desarrollador Frontend</p>
+                    <p className="creator-bio">Apasionado por el desarrollo de aplicaciones móviles con React Native y diseño de experiencias intuitivas.</p>
+                    <div className="creator-expertise">
+                      <span className="expertise-tag">React Native</span>
+                      <span className="expertise-tag">UX Design</span>
+                    </div>
+                  </div>
+
+                  <div className="creator-card">
+                    <div className="creator-image">👨‍💻</div>
+                    <h3 className="creator-name">Diego Soto</h3>
+                    <p className="creator-role">💻 Desarrollador Backend</p>
+                    <p className="creator-bio">Apasionado por crear soluciones que mejoren la experiencia del usuario y la escalabilidad de sistemas.</p>
+                    <div className="creator-expertise">
+                      <span className="expertise-tag">UI Design</span>
+                      <span className="expertise-tag">Database Management</span>
+                    </div>
+                  </div>
+
+                  <div className="creator-card">
+                    <div className="creator-image">👨‍💻</div>
+                    <h3 className="creator-name">Manuel Rios</h3>
+                    <p className="creator-role">💻 Desarrollador Backend</p>
+                    <p className="creator-bio">Creativo apasionado por el tema de la Inteligencia Artificial y la automatización de procesos.</p>
+                    <div className="creator-expertise">
+                      <span className="expertise-tag">IA Design</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="creator-card">
-                <div className="creator-image">👨‍💻</div>
-                <h3>Axel Flores</h3>
-                <p><strong>💻 Desarrollador Frontend</strong></p>
-                <p>Experto en desarrollo de aplicaciones móviles con React Native.</p>
-                <div className="creator-expertise">
-                  <span className="expertise-tag">React Native</span>
-                  <span className="expertise-tag">UX Design</span>
-                </div>
-              </div>
-              
-              <div className="creator-card">
-                <div className="creator-image">👨‍💻</div>
-                <h3>Diego Soto</h3>
-                <p><strong>💻 Desarrollador Backend</strong></p>
-                <p>Apasionado por crear soluciones innovadoras que mejoren la experiencia del usuario.</p>
-                <div className="creator-expertise">
-                  <span className="expertise-tag">UI Design</span>
-                  <span className="expertise-tag">Database Management</span>
-                </div>
-              </div>
-              <div className="creator-card">
-                <div className="creator-image">👨‍💻</div>
-                <h3>Manuel Rios</h3>
-                <p><strong>💻 Desarrollador Backend</strong></p>
-                <p>Creativo apasionado por el tema de la Inteligencia artificial.</p>
-                <div className="creator-expertise">
-                  <span className="expertise-tag">IA Design</span>
-                  <span className="expertise-tag">Gamificación</span>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       </main>
@@ -449,8 +427,8 @@ function App() {
               <div className="footer-contact">
                 <h4>Contacto</h4>
                 <div className="contact-info">
-                  <p><span className="contact-icon">📧</span> nutriaventura.app@gmail.com</p>
-                  <p><span className="contact-icon">📱</span> +52 (33) 123-4567</p>
+                  <p><span className="contact-icon">📧</span> nutriaventurainc@gmail.com</p> 
+                  <p><span className="contact-icon">📱</span> +52 (33) 18 53 41 74</p>
                   <p><span className="contact-icon">📍</span> Guadalajara, México</p>
                 </div>
               </div>

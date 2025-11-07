@@ -487,6 +487,101 @@ main {
   box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
 }
 
+/* ===== CREATORS / TEAM CARDS ===== */
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.creator-card {
+  background: white;
+  padding: 1.6rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.creator-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.creator-image {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  margin-bottom: 0.9rem;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+.creator-name {
+  margin: 0.35rem 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.creator-role {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.creator-bio {
+  margin: 0.6rem 0 0.9rem 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.creator-expertise {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.expertise-tag {
+  background: rgba(102, 126, 234, 0.08);
+  color: #374151;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(102,126,234,0.09);
+}
+
+@media (max-width: 1024px) {
+  .creators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .creators-grid {
+    grid-template-columns: 1fr;
+  }
+  .creator-image {
+    width: 72px;
+    height: 72px;
+    font-size: 36px;
+  }
+}
+
 .card-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -1532,4 +1627,79 @@ footer#footer .footer-social h4 {
   .footer-legal a {
     margin: 0 0.4rem;
   }
+}
+
+/* ===== GOOGLE PLAY BUTTON ===== */
+.google-play-button {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: #f3f4f6; /* fondo gris claro */
+  color: #111827; /* texto oscuro para buen contraste */
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.google-play-button .google-play-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.google-play-button .google-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 8px; /* más espacio para un icono más grande */
+  border-radius: 10px;
+  background: white; /* fondo blanco para que el triángulo de colores destaque */
+  box-shadow: 0 4px 14px rgba(16,24,40,0.08);
+}
+
+.google-play-button .google-play-icon svg {
+  width: 36px; /* aumentar tamaño para que el triángulo sea más visible */
+  height: 36px;
+  display: block;
+}
+
+.google-play-button .google-play-icon svg path,
+.google-play-button .google-play-icon svg g {
+  shape-rendering: geometricPrecision; /* mejorar nitidez */
+}
+
+.google-play-button .google-play-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.google-play-button .download-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.google-play-button .store-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.google-play-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(16,24,40,0.08);
+  background: #e9ecef;
+}
+
+/* PNG icon sizing to match previous SVG sizing */
+.google-play-button .google-play-icon img,
+.google-play-button .google-play-icon .google-play-img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  object-fit: contain;
 }

@@ -258,13 +258,11 @@ button:active {
   height: 160px;
   background: var(--blanco);
   border-radius: 12px;
-  padding: 1rem;
+  padding: 0.25rem;
   box-shadow: 0 4px 16px rgba(175, 82, 222, 0.1);
   border: 1px solid rgba(175, 82, 222, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+  display: block;
+  object-fit: contain;
 }
 
 /* Carousel Styles */
